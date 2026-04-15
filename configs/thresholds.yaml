@@ -1,0 +1,11 @@
+default:
+  det_conf: 0.25
+  nms_iou: 0.5
+  lane_conf: 0.4
+
+by_condition:
+  clear: {det_conf: 0.25, nms_iou: 0.5, lane_conf: 0.4}
+  rain: {det_conf: 0.2, nms_iou: 0.55, lane_conf: 0.35}
+  fog: {det_conf: 0.18, nms_iou: 0.55, lane_conf: 0.3}
+  night: {det_conf: 0.16, nms_iou: 0.6, lane_conf: 0.3}
+  glare: {det_conf: 0.15, nms_iou: 0.6, lane_conf: 0.3}

@@ -1,0 +1,548 @@
+{
+  "run_metadata": {
+    "split": "val",
+    "mode": "lightweight",
+    "models_cfg": "configs/models.yaml",
+    "model_path": "yolov8m.pt",
+    "num_samples": 10000,
+    "num_targets": 185526,
+    "num_predictions": 75982,
+    "missing_images": 0,
+    "unreadable_images": 0,
+    "det_conf": 0.25,
+    "det_iou": 0.5
+  },
+  "overall": {
+    "detection": {
+      "mode": "lightweight",
+      "iou_match_threshold": 0.5,
+      "overall": {
+        "precision": 0.7961359269300624,
+        "recall": 0.4929631410387007,
+        "f1": 0.6088991559843578,
+        "tp": 60492,
+        "fp": 15490,
+        "fn": 62219
+      },
+      "per_class": {
+        "car": {
+          "precision": 0.8318984902023772,
+          "recall": 0.5052777398396191,
+          "f1": 0.6286976682082468,
+          "tp": 51794,
+          "fp": 10466,
+          "fn": 50712
+        },
+        "truck": {
+          "precision": 0.44052464947987335,
+          "recall": 0.45889281507656066,
+          "f1": 0.44952117226260524,
+          "tp": 1948,
+          "fp": 2474,
+          "fn": 2297
+        },
+        "bus": {
+          "precision": 0.505057803468208,
+          "recall": 0.4376956793988729,
+          "f1": 0.468970144246897,
+          "tp": 699,
+          "fp": 685,
+          "fn": 898
+        },
+        "motor": {
+          "precision": 0.5961538461538461,
+          "recall": 0.34292035398230086,
+          "f1": 0.4353932584269663,
+          "tp": 155,
+          "fp": 105,
+          "fn": 297
+        },
+        "person": {
+          "precision": 0.7701149425287356,
+          "recall": 0.44457849494797164,
+          "f1": 0.5637250215125728,
+          "tp": 5896,
+          "fp": 1760,
+          "fn": 7366
+        },
+        "rider": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 649
+        }
+      },
+      "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+    },
+    "tracking": {
+      "status": "proxy_not_available",
+      "records_seen": 0,
+      "metric_definition": "BDD100K image-label split has no track GT in this pipeline. MOT metrics (HOTA/MOTA/IDF1) are not reported."
+    }
+  },
+  "per_condition": {
+    "detection": {
+      "overcast": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.8115373999447971,
+          "recall": 0.5366307720386931,
+          "f1": 0.6460558119094704,
+          "tp": 14701,
+          "fp": 3414,
+          "fn": 12694
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.8560785641720284,
+            "recall": 0.5570490502842537,
+            "f1": 0.6749252456215292,
+            "tp": 12640,
+            "fp": 2125,
+            "fn": 10051
+          },
+          "truck": {
+            "precision": 0.4308300395256917,
+            "recall": 0.49054905490549056,
+            "f1": 0.45875420875420875,
+            "tp": 545,
+            "fp": 720,
+            "fn": 566
+          },
+          "bus": {
+            "precision": 0.5544217687074829,
+            "recall": 0.40852130325814534,
+            "f1": 0.4704184704184704,
+            "tp": 163,
+            "fp": 131,
+            "fn": 236
+          },
+          "motor": {
+            "precision": 0.68,
+            "recall": 0.3722627737226277,
+            "f1": 0.48113207547169806,
+            "tp": 51,
+            "fp": 24,
+            "fn": 86
+          },
+          "person": {
+            "precision": 0.7587412587412588,
+            "recall": 0.4472689797320508,
+            "f1": 0.5627836611195158,
+            "tp": 1302,
+            "fp": 414,
+            "fn": 1609
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 146
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      },
+      "night": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.7698474395102517,
+          "recall": 0.3957292707292707,
+          "f1": 0.522747517402923,
+          "tp": 15845,
+          "fp": 4737,
+          "fn": 24195
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.7910284463894968,
+            "recall": 0.4024828123695271,
+            "f1": 0.5335104322319996,
+            "tp": 14460,
+            "fp": 3820,
+            "fn": 21467
+          },
+          "truck": {
+            "precision": 0.41013071895424835,
+            "recall": 0.3360107095046854,
+            "f1": 0.36938925680647533,
+            "tp": 251,
+            "fp": 361,
+            "fn": 496
+          },
+          "bus": {
+            "precision": 0.3746397694524496,
+            "recall": 0.4304635761589404,
+            "f1": 0.40061633281972264,
+            "tp": 130,
+            "fp": 217,
+            "fn": 172
+          },
+          "motor": {
+            "precision": 0.6764705882352942,
+            "recall": 0.23958333333333334,
+            "f1": 0.3538461538461538,
+            "tp": 23,
+            "fp": 11,
+            "fn": 73
+          },
+          "person": {
+            "precision": 0.7494270435446906,
+            "recall": 0.3450580372845586,
+            "f1": 0.47254335260115604,
+            "tp": 981,
+            "fp": 328,
+            "fn": 1862
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 125
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      },
+      "undefined": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.8001290679450539,
+          "recall": 0.5674403399803858,
+          "f1": 0.6639889832453524,
+          "tp": 8679,
+          "fp": 2168,
+          "fn": 6616
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.8394920634920635,
+            "recall": 0.606903516019462,
+            "f1": 0.7044970161977835,
+            "tp": 6611,
+            "fp": 1264,
+            "fn": 4282
+          },
+          "truck": {
+            "precision": 0.46926536731634183,
+            "recall": 0.5008,
+            "f1": 0.4845201238390093,
+            "tp": 313,
+            "fp": 354,
+            "fn": 312
+          },
+          "bus": {
+            "precision": 0.5866666666666667,
+            "recall": 0.5477178423236515,
+            "f1": 0.5665236051502146,
+            "tp": 132,
+            "fp": 93,
+            "fn": 109
+          },
+          "motor": {
+            "precision": 0.5901639344262295,
+            "recall": 0.5,
+            "f1": 0.5413533834586466,
+            "tp": 36,
+            "fp": 25,
+            "fn": 36
+          },
+          "person": {
+            "precision": 0.7860326894502229,
+            "recall": 0.4751497005988024,
+            "f1": 0.592274678111588,
+            "tp": 1587,
+            "fp": 432,
+            "fn": 1753
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 124
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      },
+      "rain": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.8060668913663469,
+          "recall": 0.5551785714285714,
+          "f1": 0.6575023791900181,
+          "tp": 3109,
+          "fp": 748,
+          "fn": 2491
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.8551294657489348,
+            "recall": 0.5755570262519303,
+            "f1": 0.6880274261603375,
+            "tp": 2609,
+            "fp": 442,
+            "fn": 1924
+          },
+          "truck": {
+            "precision": 0.509090909090909,
+            "recall": 0.5490196078431373,
+            "f1": 0.5283018867924528,
+            "tp": 168,
+            "fp": 162,
+            "fn": 138
+          },
+          "bus": {
+            "precision": 0.5104166666666666,
+            "recall": 0.44545454545454544,
+            "f1": 0.4757281553398058,
+            "tp": 49,
+            "fp": 47,
+            "fn": 61
+          },
+          "motor": {
+            "precision": 0.6363636363636364,
+            "recall": 0.35,
+            "f1": 0.45161290322580644,
+            "tp": 7,
+            "fp": 4,
+            "fn": 13
+          },
+          "person": {
+            "precision": 0.7479674796747967,
+            "recall": 0.45544554455445546,
+            "f1": 0.5661538461538461,
+            "tp": 276,
+            "fp": 93,
+            "fn": 330
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 25
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      },
+      "clear": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.8062299079924621,
+          "recall": 0.5236329601497534,
+          "f1": 0.6349053927238603,
+          "tp": 14546,
+          "fp": 3496,
+          "fn": 13233
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.8485714285714285,
+            "recall": 0.5384847830779192,
+            "f1": 0.6588670275980457,
+            "tp": 12474,
+            "fp": 2226,
+            "fn": 10691
+          },
+          "truck": {
+            "precision": 0.43030794165316044,
+            "recall": 0.45618556701030927,
+            "f1": 0.44286905754795663,
+            "tp": 531,
+            "fp": 703,
+            "fn": 633
+          },
+          "bus": {
+            "precision": 0.5578034682080925,
+            "recall": 0.44779582366589327,
+            "f1": 0.49678249678249675,
+            "tp": 193,
+            "fp": 153,
+            "fn": 238
+          },
+          "motor": {
+            "precision": 0.5538461538461539,
+            "recall": 0.3025210084033613,
+            "f1": 0.3913043478260869,
+            "tp": 36,
+            "fp": 29,
+            "fn": 83
+          },
+          "person": {
+            "precision": 0.7731290512669416,
+            "recall": 0.48502772643253234,
+            "f1": 0.5960926851431168,
+            "tp": 1312,
+            "fp": 385,
+            "fn": 1393
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 195
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      },
+      "snow": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.7957636566332219,
+          "recall": 0.5464706783034757,
+          "f1": 0.6479665940450254,
+          "tp": 3569,
+          "fp": 916,
+          "fn": 2962
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.8362044620163795,
+            "recall": 0.5656160458452723,
+            "f1": 0.6747948951686419,
+            "tp": 2961,
+            "fp": 580,
+            "fn": 2274
+          },
+          "truck": {
+            "precision": 0.44516129032258067,
+            "recall": 0.4791666666666667,
+            "f1": 0.46153846153846156,
+            "tp": 138,
+            "fp": 172,
+            "fn": 150
+          },
+          "bus": {
+            "precision": 0.42105263157894735,
+            "recall": 0.2807017543859649,
+            "f1": 0.3368421052631579,
+            "tp": 32,
+            "fp": 44,
+            "fn": 82
+          },
+          "motor": {
+            "precision": 0.14285714285714285,
+            "recall": 0.2857142857142857,
+            "f1": 0.19047619047619047,
+            "tp": 2,
+            "fp": 12,
+            "fn": 5
+          },
+          "person": {
+            "precision": 0.8014705882352942,
+            "recall": 0.5105386416861827,
+            "f1": 0.6237482117310444,
+            "tp": 436,
+            "fp": 108,
+            "fn": 418
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 33
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      },
+      "fog": {
+        "mode": "lightweight",
+        "iou_match_threshold": 0.5,
+        "overall": {
+          "precision": 0.7962962962962963,
+          "recall": 0.6056338028169014,
+          "f1": 0.688,
+          "tp": 43,
+          "fp": 11,
+          "fn": 28
+        },
+        "per_class": {
+          "car": {
+            "precision": 0.8125,
+            "recall": 0.6290322580645161,
+            "f1": 0.7090909090909092,
+            "tp": 39,
+            "fp": 9,
+            "fn": 23
+          },
+          "truck": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "tp": 2,
+            "fp": 2,
+            "fn": 2
+          },
+          "bus": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "motor": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "person": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "tp": 2,
+            "fp": 0,
+            "fn": 1
+          },
+          "rider": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "metric_definition": "Greedy IoU@0.5 matching with precision/recall/F1 aggregation."
+      }
+    }
+  },
+  "tracking": {
+    "status": "proxy_not_available",
+    "records_seen": 0,
+    "metric_definition": "BDD100K image-label split has no track GT in this pipeline. MOT metrics (HOTA/MOTA/IDF1) are not reported."
+  },
+  "slice_sizes": {
+    "overcast": 1954,
+    "night": 3929,
+    "undefined": 1091,
+    "rain": 452,
+    "clear": 2072,
+    "snow": 496,
+    "fog": 6
+  },
+  "clean_vs_adverse_sizes": {
+    "clean": 4026,
+    "adverse": 4883
+  }
+}

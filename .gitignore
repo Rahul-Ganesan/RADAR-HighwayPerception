@@ -1,0 +1,13 @@
+# Data archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Kaggle credentials and downloaded Kaggle artifacts
+kaggle.json
+**/kaggle.json
+*kaggle*
+*.kaggle

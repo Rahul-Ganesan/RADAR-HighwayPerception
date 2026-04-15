@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: highway-perception-allweather
+Version: 0.1.0
+Summary: All-weather highway perception MVP with detection, tracking, lane estimation, and condition-aware evaluation.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ultralytics>=8.2.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: opencv-python>=4.9.0.80
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: tqdm>=4.66.0
+Provides-Extra: metrics
+Requires-Dist: motmetrics>=1.4.0; extra == "metrics"
+Requires-Dist: scikit-learn>=1.4.0; extra == "metrics"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: ruff>=0.5.0; extra == "dev"
+
+# HighwayPerception All-Weather MVP
+
+MVP perception stack for highway scenes under clean and adverse conditions.
+
+## Components
+
+- Detection: Ultralytics YOLOv8 (`yolov8m.pt` default, `yolov8s.pt` fallback)
+- Tracking: ByteTrack-style tracker adapter (with fallback matching)
+- Lane estimation: LaneAF adapter (model-backed when available, heuristic fallback)
+- Condition-aware analysis: BDD100K metadata and ACDC condition slices
+
+## Quick Start
+
+1. Install:
+
+```bash
+pip install -e .[metrics,dev]
+```
+
+2. Configure model/data paths in `configs/models.yaml`.
+
+3. Run demo video generation:
+
+```bash
+python scripts/run_demo.py --video <input.mp4> --output outputs/demo/demo.mp4
+```
+
+4. Run condition-sliced evaluation:
+
+```bash
+python scripts/eval_conditions.py --bdd-root <path_to_bdd100k> --acdc-root <path_to_acdc> --output outputs/eval
+```

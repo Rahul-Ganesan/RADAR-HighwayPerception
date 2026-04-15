@@ -1,0 +1,21 @@
+seed: 42
+device: cuda:0
+
+detection:
+  backend: ultralytics
+  model: yolov8m.pt
+  fallback_model: yolov8s.pt
+  classes: [car, truck, bus, motor, person, rider]
+
+tracking:
+  backend: bytetrack
+  match_thresh: 0.3
+
+lane:
+  backend: laneaf
+  weights: ""
+  input_size: [640, 384]
+
+quality:
+  enabled: true
+  labels: [clear, rain, fog, night, glare]
